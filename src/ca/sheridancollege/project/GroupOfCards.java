@@ -14,17 +14,36 @@ import java.util.Collections;
  * The group of cards has a maximum size attribute which is flexible for reuse.
  * @author dancye
  */
-public class GroupOfCards 
-{
+public class GroupOfCards {
    
     //The group of cards, stored in an ArrayList
     private ArrayList <Card> cards;
     private int size;//the size of the grouping
     
+    
     public GroupOfCards(int givenSize)
     {
         size = givenSize;
+        cards = new ArrayList<Card>();
+        String[] colours = {"red", "blue", "green", "yellow"};
+        int[] num = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+        
+        for(String col:colours) {
+            for(int n:num) {
+                //cards.add(Card(col, n));
+            }
+        }        
     }
+    
+    public boolean isEmpty() {
+        if(cards.size()>0) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    
     
     /**
      * A method that will get the group of cards as an ArrayList
@@ -55,3 +74,4 @@ public class GroupOfCards
     }
     
 }//end class
+
