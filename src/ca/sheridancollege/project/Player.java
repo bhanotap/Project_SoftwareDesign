@@ -11,6 +11,7 @@ package ca.sheridancollege.project;
  */
 public abstract class Player 
 {
+    private ArrayList<Card> playerCards;
     private String playerID; //the unique ID for this player
     
     /**
@@ -19,6 +20,7 @@ public abstract class Player
      */
     public Player(String name)
     {
+        playerCards = new ArrayList<Card>();
         playerID= name;
     }
     
@@ -38,7 +40,21 @@ public abstract class Player
     {
         playerID = givenID;
     }
+ 
     
+    /**
+     * The method to be instantiated when you subclass the Player class
+     * with your specific type of Player and filled in with logic to play your game.
+     */
+    public abstract void play();
+   
+    
+    public static void main(String[] args) {
+        
+    }
+    
+}
+
     /**
      * The method to be instantiated when you subclass the Player class
      * with your specific type of Player and filled in with logic to play your game.
