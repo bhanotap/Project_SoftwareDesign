@@ -11,8 +11,11 @@ package ca.sheridancollege.project;
  * should remember to add themselves as a modifier.
  * @author dancye, 2018
  */
-public abstract class Card 
-{
+public abstract class Card {
+    
+    private String colour;
+    private int value;
+    //private boolean wild; <-- wildcards (chk if true)
     //default modifier for child classes
     
     /**
@@ -23,4 +26,38 @@ public abstract class Card
     @Override
     public abstract String toString();
     
+    
+    public Card(String colour, int value) {
+        
+        this.colour = colour;
+        this.value = value;
+        //this.wild = false; // <-- wildcards
+        
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    /*public int getWild() {
+        return wild;
+    }
+
+    public void setWild(int wild) {
+        this.wild = wild;
+    }*/
+    
 }
+
